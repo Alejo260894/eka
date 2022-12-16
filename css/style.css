@@ -5,7 +5,7 @@
 }
 
 header div {
-    height: 117px;
+    height: 100px;
     background: #FFFFFF;
     display: flex;
     flex-direction: row;
@@ -208,7 +208,7 @@ section div img {
 
 .ciberdays {
     width: 100%;
-    height: 516px;
+    ;
     background: #E05851;
 }
 
