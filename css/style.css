@@ -7,6 +7,7 @@
 
 .cabecera {
     height: 100px;
+    width: auto;
     background: #FFFFFF;
     display: flex;
     flex-direction: row;
@@ -15,7 +16,19 @@
     padding: 32px 100px;
 
 }
-.texto_buscar{
+
+@media screen and (max-width: 750px) {
+    .cabecera p {
+        background-color: blue;
+        font: 0/0 a;
+        text-shadow: transparent;
+        color: transparent;
+        text-decoration: none
+    }
+}
+
+
+.texto_buscar {
     padding-right: 80px;
 }
 
@@ -36,18 +49,18 @@
 .cabecera_logo {
     width: 201px;
     height: 53px;
-    
+
 }
 
 nav {
-    
+
     height: 92px;
-    display:grid;
+    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
 }
 
-.menu{
+.menu {
     display: grid;
     justify-content: space-evenly;
     justify-items: center;
@@ -57,7 +70,7 @@ nav {
 nav div ul {
     background-color: #FFFFFF;
     align-items: center;
-    
+
 
     display: flex;
     flex-direction: row;
@@ -77,11 +90,11 @@ nav div a {
 
 }
 
-.iconos{
+.iconos {
     display: grid;
     grid-template-columns: max-content 50px 50px;
     justify-content: center;
-    align-items: center;
+    align-content: center;
 }
 
 .icono_corazon {
@@ -94,7 +107,7 @@ nav div a {
 
 
 .bolsa_compra {
-    
+
     width: 20px;
     height: 20px;
     left: 90%;
@@ -110,9 +123,13 @@ section div img {
 
 .conoce_mas {
     width: 100%;
-    height: 533px;
+    height: auto;
     background: rgba(255, 211, 210, 0.15);
 
+}
+
+.navbar-brand {
+    padding-left: 20px;
 }
 
 .conoce_mas_titulo {
@@ -123,51 +140,53 @@ section div img {
     line-height: 32px;
     text-align: center;
     color: #FF0000;
-    padding-top: 48.5px;
+    margin-top: 40.5px;
 
 }
 
 .ofertas {
-    padding: 70px;
-    display: grid;
-    grid-template-columns: 300px 300px 300px;
-    gap: 24px;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 96%;
+    max-width: 960px;
+    margin: 0px auto;
+    padding-bottom: 20px;
 
 }
 
 .ofertas div {
     width: 300px;
-    height: 380px;
+    height: auto;
 
 }
-.ofertas img{
-    width: 300px;
-    
-}
+
+.ofertas img {}
+
 .ofertas_1 {
     background: #E0EDFD;
-    
+    width: 100%;
+    height: auto;
+    align-items: center;
 }
 
 .ofertas_2 {
     background: #F8DADA;
+    width: 100%;
+    height: auto;
 }
 
 .ofertas_3 {
     background: #F6E0BD;
+    width: 100%;
+    height: auto;
 }
 
 .mas_vendidos {
     width: 100%;
-    height: 662px;
+    height: auto;
     background: #FFFFFF;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    grid-auto-flow: dense;
+
 }
 
 .mas_vendidos_titulo {
@@ -178,15 +197,15 @@ section div img {
     line-height: 32px;
     text-align: center;
     color: #FF0000;
-    padding-top: 48.5px;
+    padding-top: 40.5px;
 }
 
 .mas_vendidos_lista {
     width: 100%;
-    height: 384px;
+    height: auto;
     padding: 70px;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 24px;
 }
@@ -197,6 +216,14 @@ section div img {
 
 }
 
+.boton_ver_todo {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 20px 0px;
+}
+
+
 .mas_vendidos_lista_mas {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
@@ -206,22 +233,11 @@ section div img {
     color: #E75313;
 }
 
-.mas_vendidos button {
 
-    width: 147px;
-    height: 46px;
-    color: #FFFFFF;
-    background: #EF0000;
-    border-radius: 4px;
-    flex-grow: 0;
-    border-color: #EF0000;
-    align-items: center;
-    margin: 70px 646px 63px 646px;
-}
 
 .ciberdays {
     width: 100%;
-    ;
+
     background: #E05851;
 }
 
@@ -232,11 +248,19 @@ section div img {
     margin: auto;
 }
 
+@media screen and (max-width: 520px) {
+    .ciberdays img {
+        width: 100%;
+        height: auto;
+
+    }
+}
+
 .pie_de_pagina {
 
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .pie_de_pagina_1 {
@@ -256,9 +280,15 @@ section div img {
     font-weight: 600;
 }
 
-.pie_de_pagina_1_img {
-    width: 201px;
+.pie_de_pagina_logo {
+    width: 150px;
     height: 53px;
+}
+
+.pie_de_pagina_img {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
 
 }
 
