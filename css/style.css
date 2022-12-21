@@ -90,6 +90,7 @@ nav div a {
 
 }
 
+
 .iconos {
     display: grid;
     grid-template-columns: max-content 50px 50px;
@@ -338,6 +339,7 @@ section div img {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-self: auto;
     background: rgba(255, 211, 210, 0.15);
 
 }
@@ -345,14 +347,47 @@ section div img {
 .nuevo_cabecera_fondo {
 
     background: #F8DADA;
+
 }
 
 .nuevo_cabecera img {
-    width: 209.75px;
-    height: 229.55px;
-    margin: 100px 600px;
+    width: 211px;
+    height: auto;
+}
+
+@keyframes efecto {
+    0% {
+        width: 100%;
+    }
+
+    25% {
+        width: 125%;
+    }
+
+    50% {
+        width: 150%;
+    }
+
+    75% {
+        width: 125%;
+    }
+
+    100% {
+        width: 100%;
+    }
+
 
 }
+
+.img_animacion {
+    width: 100%;
+    animation-name: efecto;
+    animation-duration: infinite;
+    animation-timing-function: ease-out;
+    animation-duration: 4s;
+    animation-delay: 2s;
+}
+
 
 .nuevo_producto {
     width: 100%;
@@ -378,7 +413,17 @@ section div img {
 
 .nosotros_cabecera {
     background: rgba(255, 211, 210, 0.15);
+    display: grid;
+    grid-template-columns: 50% minmax(min-content, 600px);
+    grid-template-rows: auto;
+    grid-template-areas: "a b";
+    grid-auto-columns: 50%;
+    justify-items: start;
+    align-items: center;
+
 }
+
+
 
 .nosotros_cabecera_1 {
     font-family: 'Roboto', sans-serif;
@@ -387,9 +432,8 @@ section div img {
     font-size: 20px;
     line-height: 26px;
     padding: 48px 81px 60px 81px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    width: 100%;
+    grid-area: a;
     height: 300px;
 }
 
@@ -403,7 +447,28 @@ section div img {
     font-weight: 600;
     font-size: 18px;
     line-height: 26px;
-    padding: 10px 80px 70px 937px;
+    width: 100%;
+    grid-area: b;
+    padding: 48px 81px 60px 81px;
+    grid-column-start: 2;
+}
+
+.nosotros_cabecera_2 p {
+    animation-duration: 3s;
+    animation-name: slidein;
+
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
 }
 
 .nosotros_cabecera_3 {
@@ -412,13 +477,24 @@ section div img {
     font-weight: 600;
     font-size: 20px;
     line-height: 26px;
-    padding: 48px 900px 60px 81px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    padding: 48px 0px 60px 81px;
+
     height: 300px;
 }
 
+@media screen and (max-width: 650px) {
+    .nosotros_cabecera {
+        background: rgba(255, 211, 210, 0.15);
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-gap: 2px;
+        grid-auto-rows: 50%;
+        padding: auto;
+        justify-items: start;
+        align-items: center;
+    }
+}
 .contactanos {
     width: 100%;
 
