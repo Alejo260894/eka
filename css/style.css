@@ -18,6 +18,19 @@
 }
 
 @media screen and (max-width: 750px) {
+    .cabecera {
+        height: 100px;
+        width: auto;
+        background: #FFFFFF;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+
+    }
+}
+
+@media screen and (max-width: 750px) {
     .cabecera p {
         background-color: blue;
         font: 0/0 a;
@@ -170,6 +183,8 @@ section div img {
     max-width: 960px;
     margin: 0px auto;
     padding-bottom: 20px;
+    justify-content: center;
+    justify-items: center;
 
 }
 
@@ -184,7 +199,7 @@ section div img {
     background: #E0EDFD;
     width: 100%;
     height: auto;
-    
+
 }
 
 .ofertas_2 {
@@ -511,6 +526,7 @@ section div img {
         align-items: center;
     }
 }
+
 .contactanos {
     width: 100%;
 
@@ -560,6 +576,19 @@ section div img {
 
 .contactanos_cuadro_texto textarea {
     height: 200px;
+}
+
+@media screen and (max-width: 720px) {
+    .logo_footer {
+        width: 100%;
+              
+        padding: 0px 10px 0px 10px;
+
+    }
+}
+
+.logo_footer{
+
 }
 
 .boton {
